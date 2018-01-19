@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Broadway\Saga\State;
+namespace Broadway\Saga\State\MongoDB;
 
 use Broadway\Saga\State\Testing\AbstractRepositoryTest;
 use Doctrine\MongoDB\Configuration;

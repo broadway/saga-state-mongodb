@@ -41,12 +41,12 @@
   ],
   "autoload": {
     "psr-4": {
-      "Broadway\\Saga\\": "src/"
+      "Broadway\\Saga\\State\\MongoDB\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Broadway\\Saga\\": "test/"
+      "Broadway\\Saga\\State\\MongoDB\\": "test/"
     }
   },
   "extra": {

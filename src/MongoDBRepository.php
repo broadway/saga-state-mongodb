@@ -9,9 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Broadway\Saga\State;
+namespace Broadway\Saga\State\MongoDB;
 
 use Broadway\Saga\State;
+use Broadway\Saga\State\Criteria;
+use Broadway\Saga\State\RepositoryException;
+use Broadway\Saga\State\RepositoryInterface;
 use Doctrine\MongoDB\Collection;
 
 class MongoDBRepository implements RepositoryInterface
