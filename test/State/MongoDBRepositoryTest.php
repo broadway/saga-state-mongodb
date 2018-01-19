@@ -11,12 +11,10 @@
 
 namespace Broadway\Saga\State;
 
+use Broadway\Saga\State\Testing\AbstractRepositoryTest;
 use Doctrine\MongoDB\Configuration;
 use Doctrine\MongoDB\Connection;
 
-/**
- * @group mongo
- */
 class MongoDBRepositoryTest extends AbstractRepositoryTest
 {
     protected static $dbName = 'doctrine_mongodb';
