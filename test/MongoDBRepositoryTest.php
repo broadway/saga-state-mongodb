@@ -9,14 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Broadway\Saga\State;
+namespace Broadway\Saga\State\MongoDB;
 
+use Broadway\Saga\State\Testing\AbstractRepositoryTest;
 use Doctrine\MongoDB\Configuration;
 use Doctrine\MongoDB\Connection;
 
-/**
- * @group mongo
- */
 class MongoDBRepositoryTest extends AbstractRepositoryTest
 {
     protected static $dbName = 'doctrine_mongodb';

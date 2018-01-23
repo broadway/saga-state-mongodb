@@ -1,17 +1,27 @@
-broadway/broadway-saga
-======================
+broadway/saga-state-mongodb
+===========================
 
-Proof-of-concept component providing saga functionality to your application.
-
-This component provides saga state and metadata management and a manager that
-can be used to wake up and start sagas.
+Saga state persistence for [broadway/broadway-saga](https://github.com/broadway/broadway-saga) using MongoDB.
 
 > Note: this component is highly experimental.
 
 # Installation
 
 ```
-$ composer require broadway/broadway-saga
+$ composer require broadway/saga-state-mongodb
 ```
 
-> Note: to use MongoDB on PHP7 you will also need to install `alcaeus/mongo-php-adapter`
+Testing
+-------
+For testing you need a running MongoDB instance.
+To start a local MongoDB you can use the provided [docker-compose.yml](https://docs.docker.com/compose/compose-file/):
+
+```
+docker-compose up -d
+```
+
+To run the tests:
+
+```
+./vendor/bin/phpunit
+```
