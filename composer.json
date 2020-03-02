@@ -3,7 +3,7 @@
   "description": "Saga state persistence for broadway/broadway-saga using MongoDB",
   "license": "MIT",
   "require": {
-    "php": ">=7.0",
+    "php": ">=7.2",
     "broadway/broadway-saga": "~0.4",
     "doctrine/mongodb": "^1.0",
     "beberlei/assert": "^3.0",
