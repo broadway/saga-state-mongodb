@@ -33,7 +33,7 @@ class MongoDBRepositoryTest extends AbstractRepositoryTest
         return new MongoDBRepository($coll);
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         $collections = $this->connection->selectDatabase(self::$dbName)->listCollections();
         foreach ($collections as $collection) {
