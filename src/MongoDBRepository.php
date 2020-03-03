@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the broadway/broadway-saga package.
  *
@@ -27,15 +29,15 @@ class MongoDBRepository implements RepositoryInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function findOneBy(Criteria $criteria, $sagaId)
     {
-        $query   = $this->createQuery($criteria, $sagaId);
+        $query = $this->createQuery($criteria, $sagaId);
         $results = $query->execute();
-        $count   = count($results);
+        $count = count($results);
 
-        if ($count === 1) {
+        if (1 === $count) {
             return State::deserialize(current($results->toArray()));
         }
 
@@ -47,13 +49,13 @@ class MongoDBRepository implements RepositoryInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function save(State $state, $sagaId)
     {
-        $serializedState            = $state->serialize();
-        $serializedState['_id']     = $serializedState['id'];
-        $serializedState['sagaId']  = $sagaId;
+        $serializedState = $state->serialize();
+        $serializedState['_id'] = $serializedState['id'];
+        $serializedState['sagaId'] = $sagaId;
         $serializedState['removed'] = $state->isDone();
 
         $this->collection->save($serializedState);
@@ -62,10 +64,10 @@ class MongoDBRepository implements RepositoryInterface
     private function createQuery(Criteria $criteria, $sagaId)
     {
         $comparisons = $criteria->getComparisons();
-        $wheres      = [];
+        $wheres = [];
 
         foreach ($comparisons as $key => $value) {
-            $wheres['values.' . $key] = $value;
+            $wheres['values.'.$key] = $value;
         }
 
         $queryBuilder = $this->collection->createQueryBuilder()
