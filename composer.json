@@ -11,7 +11,8 @@
   },
   "require-dev": {
     "phpunit/phpunit": "^7.5",
-    "ramsey/uuid": "^3.3"
+    "ramsey/uuid": "^3.3",
+    "broadway/coding-standard": "~0.1"
   },
   "authors": [
     {
