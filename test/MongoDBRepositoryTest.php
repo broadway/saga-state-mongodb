@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Broadway\Saga\State\MongoDB;
 
+use Broadway\Saga\State\RepositoryInterface;
 use Broadway\Saga\State\Testing\AbstractRepositoryTest;
 use Doctrine\MongoDB\Configuration;
 use Doctrine\MongoDB\Connection;
@@ -22,7 +23,7 @@ class MongoDBRepositoryTest extends AbstractRepositoryTest
     protected static $dbName = 'doctrine_mongodb';
     protected $connection;
 
-    protected function createRepository()
+    protected function createRepository(): RepositoryInterface
     {
         $config = new Configuration();
         $config->setLoggerCallable(function ($msg) {});

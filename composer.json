@@ -4,7 +4,7 @@
   "license": "MIT",
   "require": {
     "php": ">=7.2",
-    "broadway/broadway-saga": "~0.8",
+    "broadway/broadway-saga": "~0.10",
     "doctrine/mongodb": "^1.0",
     "beberlei/assert": "^3.0",
     "alcaeus/mongo-php-adapter": "^1.1"

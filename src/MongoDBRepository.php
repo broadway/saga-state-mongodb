@@ -31,7 +31,7 @@ class MongoDBRepository implements RepositoryInterface
     /**
      * {@inheritdoc}
      */
-    public function findOneBy(Criteria $criteria, $sagaId)
+    public function findOneBy(Criteria $criteria, $sagaId): ?State
     {
         $query = $this->createQuery($criteria, $sagaId);
         $results = $query->execute();
@@ -51,7 +51,7 @@ class MongoDBRepository implements RepositoryInterface
     /**
      * {@inheritdoc}
      */
-    public function save(State $state, $sagaId)
+    public function save(State $state, $sagaId): void
     {
         $serializedState = $state->serialize();
         $serializedState['_id'] = $serializedState['id'];
