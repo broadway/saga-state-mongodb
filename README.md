@@ -5,7 +5,7 @@ Saga state persistence for [broadway/broadway-saga](https://github.com/broadway/
 
 > Note: this component is highly experimental.
 
-[![Build Status](https://travis-ci.org/broadway/saga-state-mongodb.svg?branch=master)](https://travis-ci.org/broadway/saga-state-mongodb)
+![build status](https://github.com/broadway/saga-state-mongodb/actions/workflows/ci.yml/badge.svg)
 
 # Installation
 
