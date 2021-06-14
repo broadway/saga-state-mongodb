@@ -13,7 +13,6 @@
   <testsuites>
     <testsuite name="Broadway Saga Test Suite">
       <directory>./test/</directory>
-      <directory>./examples/</directory>
     </testsuite>
   </testsuites>
   <filter>
